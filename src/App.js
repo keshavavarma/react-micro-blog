@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Create from "./Create";
 import BlogDetails from "./BlogDetails";
+import Error404 from "./Error404";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/blogs/:id">
               <BlogDetails />
+            </Route>
+            <Route path="*">
+              <Error404 />
             </Route>
           </Switch>
         </div>
